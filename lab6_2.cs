@@ -102,18 +102,15 @@ namespace Lab06Lib
             if (input.ToLower() == "f")
             {
                 string ask = "";
-                Console.WriteLine("Input '1' to seatch by currency code or '2' to search by it's value:");
+                Console.WriteLine("Input\n'1' to seatch by currency name department\n'2' to search by it's code:");
                 ask = Console.ReadLine();
                 if (ask == "1")
                 {
                     string name;
-                    for (; ; )
-                    {
+                    
                         Console.WriteLine("Input name search");
                         name = Console.ReadLine();
-                        if (name.Length == 3)
-                            break;
-                    }
+                    
                     int index = 0;
                     foreach (PolliceDepartmentID elem in list)
                     {
@@ -130,10 +127,9 @@ namespace Lab06Lib
                 if (ask == "2")
                 {
                     string idCheck;
-                    for (; ; )
-                    {
-                        Console.WriteLine("Input search id ");
-                    }
+                    
+                    Console.WriteLine("Input search id ");
+                    idCheck = Console.ReadLine();
                     int index = 0;
                     foreach (PolliceDepartmentID elem in list)
                     {
